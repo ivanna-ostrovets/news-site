@@ -2,7 +2,8 @@
 
 <nav>
   <a href="index.php" class="
-    <?php if ($_SERVER['REQUEST_URI'] == '/index.php' ||
+    <?php if ($_SERVER['REQUEST_URI'] == '/' || 
+      $_SERVER['REQUEST_URI'] == '/index.php' ||
       ($url == '/index.php' && isset($_GET['publicated']) && $_GET['publicated'] == 1)): ?>
         active
     <?php endif; ?>

@@ -1,14 +1,5 @@
 <?php
-  $servername = 'localhost';
-  $username = 'root';
-  $password = '';
-  $dbname = 'news_db';
-
-  $conn = mysqli_connect($servername, $username, $password, $dbname);
-
-  if (!$conn) {
-    die('Connection failed: ' . mysqli_connect_error());
-  }
+  require 'db/connect.php';
 
   $offset = isset($_GET['offset']) ? $_GET['offset'] : 0;
   $publicated = isset($_GET['publicated']) ? $_GET['publicated'] : 1;
